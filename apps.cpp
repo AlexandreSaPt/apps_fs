@@ -7,16 +7,16 @@
 
 FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> can1;
 
-bool endiannessState = 0 // 0 -> little (árabe) , 1 -> big (ordem tuga)
+bool endiannessState = 0; // 0 -> little (árabe) , 1 -> big (ordem tuga)
 
 short int msgCount = 0;
 
 void updateEndiannessState(){
-    msgCount += 1;
     if(msgCount == 5){
         endiannessState = !endiannessState;
         msgCount = 0;
     }
+    msgCount += 1;
 }
 
 
@@ -27,8 +27,8 @@ void canSetup(){
 }
 
 
-
 void sendAPPS(int val) {
+    //stdint.h comes in the Arduino core
     uint8_t byte1 = (val >> 8) & 0xFF;  // MSB
     uint8_t byte2 = val & 0xFF;         // LSB
 
