@@ -5,14 +5,16 @@
 
 #define APPS_PIN 
 
-FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> can1;
+#define ENDIANNESS_CYCLE_NUMBER 5
+
+FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> canBus;
 
 bool endiannessState = 0; // 0 -> little (árabe) , 1 -> big (ordem tuga)
 
 short int msgCount = 0;
 
 void updateEndiannessState(){
-    if(msgCount == 5){
+    if(msgCount == ENDIANNESS_CYCLE_NUMBER){
         endiannessState = !endiannessState;
         msgCount = 0;
     }
@@ -22,8 +24,8 @@ void updateEndiannessState(){
 
 
 void canSetup(){
-    can1.begin();
-    can1.setBaudRate(BAUDRATE_CAN);
+    canBus.begin();
+    canBus.setBaudRate(BAUDRATE_CAN);
 }
 
 
@@ -38,7 +40,7 @@ void sendAPPS(int val) {
     msg.buf[0] = endiannessState? byte1 : byte2;
     msg.buf[1] = endiannessState? byte2 : byte1;
 
-    can1.write(msg);
+    canBus.write(msg);
 }
 
 void setup(){
