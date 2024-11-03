@@ -10,7 +10,8 @@ When powering the APPS and connecting in to an analog pin in the Teensy, you are
 
 Moreover, since the analog pin in the Teensy only supports voltage of up to 3.3v and since it is possible to power the APPS with that same voltage (max 60v), we will be using the 3.3v pin in the Teensy to power the APPS (since it does not use more then 250 mA which is the max current that you can drawn from one pin, because it has a resistance of 1k ohms +/- 20%).<br>
 <img src="./img/analog_range.png"> <br>
-<img src="./img/resistance_apps.png" width="40%">  <img src="./img/max_voltage_apps.png" width="40%">
+<img src="./img/resistance_apps.png" width="40%">  <img src="./img/max_voltage_apps.png" width="40%"><br>
+<a href="https://drive.google.com/file/d/12FtGbusMZVe7uaO5q1Q5tcwvbHOlCPSQ/view?usp=sharing">Link</a>
 
 
 
