@@ -18,7 +18,15 @@ IMG
 
 
 ## Code
-Here's am image of the schematics and its link. <br>
-Link: <br>
+Here's am image of the schematics that we used for the change in the endianness of the message, that also contains some details of our implementation. <br>
+<a href="https://drive.google.com/file/d/1KbxM-VLz5GqEzZXmRr_Mq3aF3P88dXgd/view?usp=drive_link">Link</a> <br>
+<img src="./endianess_diagram.png" width="300px">
 
-### Considerations
+Our code is in the *apps.cpp* file. It makes use of the Arduino library (which contains functions like *analogRead()* and *pinMode()*) and the *FlexCAN_T4.h*. This one is used for the communication via the CAN protocol.
+
+
+To send a CAN message using this library, we have to create a variable using the struct *CAN_message_t*. Here, we define, among other things, the ID, the data and its length in bytes. <br>
+<img src="./CAN_message_t.png" width="400px"><br>
+The ID of the message you can find in the *CAN Table* file in the FS Google Drive. <br>
+<img src="./CAN_Table.png"><br>
+
