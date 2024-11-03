@@ -29,5 +29,5 @@ To send a CAN message using this library, we have to create a variable using the
 The ID of the message you can find in the *CAN Table* file in the FS Google Drive. <br>
 <img src="./img/CAN_Table.png"><br>
 
-To setup up the CAN communication, we followed the *FlexCAN_T4* <a href="https://github.com/tonton81/FlexCAN_T4/tree/master">github</a> repository ans its examples. The baudrate set in our code is the same as the one the FS team used in the 01.
+To setup up the CAN communication, we followed the *FlexCAN_T4*'s <a href="https://github.com/tonton81/FlexCAN_T4/tree/master">github</a> repository and its examples. The baudrate set in our code is the same as the one the FS team used in the 01.
 
