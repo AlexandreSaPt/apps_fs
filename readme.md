@@ -12,7 +12,7 @@ Moreover, since the analog pin in the Teensy only supports voltage of up to 3.3v
 <img src="./img/analog_range.png"> <br>
 <img src="./img/resistance_apps.png" width="40%">  <img src="./img/max_voltage_apps.png" width="40%"><br>
 <a href="https://drive.google.com/file/d/12FtGbusMZVe7uaO5q1Q5tcwvbHOlCPSQ/view?usp=sharing">Link</a>
-<img src="" width="400px">
+<img src="./img/IMG-20241103-WA0013.jpg" width="400px">
 
 
 
